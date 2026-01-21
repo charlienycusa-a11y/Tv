@@ -20,8 +20,12 @@ jobs:
           chmod +x gradlew
           chmod 644 gradle/wrapper/gradle-wrapper.jar
 
-      - name: Build APK
-        run: ./gradlew assembleDebug
+           - name: Build APK
+        run: |
+          chmod +x gradlew
+          chmod +x gradle/wrapper/gradle-wrapper.jar
+          ./gradlew assembleDebug
+
 
       - uses: actions/upload-artifact@v4
         with:
