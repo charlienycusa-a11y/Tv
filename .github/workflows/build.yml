@@ -14,10 +14,11 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Build
-        run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
+      - name: Fix Gradle permissions
+        run: chmod +x gradlew
+
+      - name: Build APK
+        run: ./gradlew assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
