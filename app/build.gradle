@@ -6,6 +6,7 @@ plugins {
 android {
     namespace 'com.tv.app'
     compileSdk 34
+
     defaultConfig {
         applicationId "com.tv.app"
         minSdk 21
@@ -13,7 +14,24 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
 }
+
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
