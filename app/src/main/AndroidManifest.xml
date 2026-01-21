@@ -1,7 +1,15 @@
-<manifest package="com.tv.app">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
     <uses-feature android:name="android.software.leanback" android:required="true" />
-    <application android:label="TV" android:theme="@style/Theme.TV">
-        <activity android:name=".MainActivity" android:exported="true">
+
+    <application
+        android:label="TV"
+        android:theme="@style/Theme.AppCompat">
+        
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -9,4 +17,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
